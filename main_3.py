@@ -14,16 +14,8 @@ if __name__ == '__main__':
     #     print("")
     #     question = input("What is your query: ")
     question = PromptTemplate.from_template(
-        template="""
-        Q: How to cook Boiled Egg?
-        A: - Choose fresh Eggs.
-           - Bring Eggs to room temperature
-           - Add Eggs to boiled water
-           - cool Eggs
-        
-        Q: How to cook {recipe}?
-        """
+        template="How to cook {recipe}"
     )
     chain = question | llm
-    for chunk in chain.stream({"recipe": "French Fries"}):
+    for chunk in chain.stream({"recipe": "Boiled Egg"}):
         print(chunk, end="", flush=True)
