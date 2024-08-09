@@ -41,4 +41,4 @@ Using chat model to create a chatbot with Memory.
 `
 huggingface-cli download TheBloke/Llama-2-7B-Chat-GGUF llama-2-7b-chat.Q8_0.gguf --local-dir . --local-dir-use-symlinks False
 `
-
+Create a chatbot with a memory.
