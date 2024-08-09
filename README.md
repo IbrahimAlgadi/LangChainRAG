@@ -16,3 +16,9 @@ huggingface-cli download TheBloke/Mistral-7B-v0.1-GGUF mistral-7b-v0.1.Q8_0.gguf
 python main.py
 `
 
+
+##### Adding Prompt:
+
+chain = Prompt(Text(vars)) | LLM 
+
+chain invoke with ({ vars and values })
