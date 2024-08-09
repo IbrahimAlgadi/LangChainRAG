@@ -1,4 +1,5 @@
 mistral-7b-v0.1.Q8_0.gguf
+llama-2-7b-chat.Q8_0.gguf
 .cache
 .idea
 venv
