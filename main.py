@@ -21,9 +21,8 @@ if __name__ == '__main__':
            - Add Eggs to boiled water
            - cool Eggs
         
-        Q: How to cook {recipe}?
-        """
+        Q: How to cook {recipe}?"""
     )
-    chain = question | llm
+    chain = question | llm.bind(stop=["Q:"])
     for chunk in chain.stream({"recipe": "French Fries"}):
         print(chunk, end="", flush=True)
